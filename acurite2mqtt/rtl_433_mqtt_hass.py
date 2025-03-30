@@ -535,6 +535,18 @@ mappings = {
         }
     },
 
+    "storm_dist_km": {
+        "device_type": "sensor",
+        "object_suffix": "stdist",
+        "config": {
+            "device_class":"distance",
+            "state_class":"measurement",
+            "name": "Lightning Distance Km",
+            "unit_of_measurement": "km",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
     "strike_distance": {
         "device_type": "sensor",
         "object_suffix": "stdist",
@@ -563,6 +575,24 @@ mappings = {
         "config": {
             "name": "Lightning Strike Count",
             "state_class":"total_increasing",
+            "value_template": "{{ value|int }}"
+        }
+    },
+    "pm2_5_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "pm_25",
+        "config": {
+            "name": "PM2.5 Mass Concentration",
+            "state_class":"measurement",
+            "value_template": "{{ value|int }}"
+        }
+    },
+    "pm10_0_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "pm_10",
+        "config": {
+            "name": "PM10 Mass Concentraton",
+            "state_class":"measurement",
             "value_template": "{{ value|int }}"
         }
     },
