@@ -341,6 +341,8 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "WD",
         "config": {
+            "device_class": "wind_direction",
+            "state_class": "measurement_angle",
             "name": "Wind Direction",
             "unit_of_measurement": "°",
             "value_template": "{{ value|float }}"
@@ -534,7 +536,6 @@ mappings = {
             "value_template": "{{ value|int }}"
         }
     },
-
     "storm_dist_km": {
         "device_type": "sensor",
         "object_suffix": "stdist",
@@ -582,6 +583,8 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "pm_25",
         "config": {
+            "device_class": "pm25",
+            "unit_of_measurement": "µg/m³",
             "name": "PM2.5 Mass Concentration",
             "state_class":"measurement",
             "value_template": "{{ value|int }}"
@@ -591,6 +594,8 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "pm_10",
         "config": {
+            "device_class": "pm10",
+            "unit_of_measurement": "µg/m³",
             "name": "PM10 Mass Concentraton",
             "state_class":"measurement",
             "value_template": "{{ value|int }}"
